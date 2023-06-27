@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> 
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+
+</head>
+<body>
+<main>
+
+<div class="desktop-left">
+  <h1>Learn to code by watching others</h1>
+
+  <p class="description">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+  but understanding how developers think is invaluable.</p>
+</div><!--desktop-left-->
+
+<div class="desktop-right">
+  <div class="blue-container">
+  <h2><strong>Try it free 7 days</strong> then $20/mo. thereafter</h2>
+  </div><!--blue-container-->
+
+  <form name="sign-up-form">
+
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname" class="input" aria-describedby="fname-error" required>
+  <span class="error-message" id="fname-error" aria-live="polite">First Name cannot be empty</span>
+
+  <label for="lname">Last Name</label>
+  <input type="text" class="input" id="lname" name="lname" aria-describedby="lname-error" required>
+  <span class="error-message" id="lname-error" aria-live="polite">Last Name cannot be empty</span>
+
+  <label for="email">Email Address</label>
+  <input type="email" class="input" id="email" name="email" aria-describedby="email-error" required>
+  <span class="error-message" id="email-error" aria-live="polite">Looks like this is not an email</span>
+
+  <label for="password">Password</label>
+  <input type="password" class="input" id="password" name="password" aria-describedby="password-error" required>
+  <span class="error-message" id="password-error" aria-live="polite">Password cannot be empty</span>
+
+  <input type="submit" id="submit" aria-describedby="terms" value="Claim your free trial">
+  <p id="terms">By clicking the button, you are agreeing to our <a href="">Terms and Services</a></p>
+  </form>
+</div><!--desktop-right-->
+
+<script src="script.js"></script>
+</main>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/fernandanevesf">Fernanda</a>.
+    </p>
+  </footer>
+</body>
+</html>

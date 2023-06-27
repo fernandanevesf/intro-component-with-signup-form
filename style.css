@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    --modified-red: rgb(151, 67, 67);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: var(--modified-red); /*I took the liberty to change this because the original color is hard on the eyes*/
+    background-image: url(images/bg-intro-mobile.png);
+    background-blend-mode: multiply;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main{
+    text-align: center;
+    margin: 0 2rem;
+
+}
+
+h1{
+    line-height: 1.5;
+    font-size: 1.7rem;
+    margin: 3rem 0 1.5rem;
+}
+
+.description{
+    margin: 0 1rem 4rem;
+}
+
+.blue-container{
+    background-color: var(--blue);
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0 10px rgb(85, 46, 46);
+
+}
+
+h2{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    color: var(--dark-blue);
+    background-color: white;
+    padding: 1rem 1.4rem;
+    border-radius: 8px;
+    min-width: 21rem;
+    box-shadow: 0 10px rgb(85, 46, 46);
+}
+
+label{
+    display: flex;
+}
+
+input{
+    display: block;
+    padding: .8rem 1rem;
+    margin: .5rem 0;
+    border-style: solid;
+    border-radius: 3px;
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 200% /*95% 50%*/;
+}
+
+input[type=submit]{
+    background-image: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: var(--green);
+    border-bottom-color: hsl(154, 54%, 45%);
+    border-bottom-width: 5px;
+    border-radius: 6px;
+    padding: 1rem 0;
+}
+
+input[type=submit]:hover{
+    background-color: hsl(154, 60%, 69%);
+    cursor: pointer;
+}
+
+.error-message{
+    color: var(--red);
+    text-align: right;
+    font-size: .8rem;
+    display: none; /*stil can't change display with Javascript*/
+}
+
+.error{
+    border: 2px solid #FF7979;
+}
+
+#terms{
+    font-size: .7rem;
+    padding: 0 1.7rem 1.2rem;
+}
+
+.terms > a{
+    text-decoration: none;
+    color: var(--modified-red);
+    font-weight: 600;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    color: hsl(228, 33%, 17%); 
+    margin: 1rem;
+}
+
+.attribution > a:link{
+    color: hsl(229, 90%, 20%);
+}
+
+.attribution > a:visited{
+    color: rgb(34, 4, 43);
+}
+
+@media only screen and (min-width: 60rem){
+    body{
+        background-image: url(images/bg-intro-desktop.png);
+    }
+
+    main{
+        display: flex;
+        column-gap: 5rem;
+    }
+
+    .desktop-left{
+        align-self: center;
+    }
+
+    h1, .description{
+       text-align: left; 
+       margin: 0;
+       max-width: 31rem;
+    }
+
+    h1{
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+
+    .blue-container{
+        margin-top: 2rem;
+    }
+
+
+}
