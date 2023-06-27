@@ -108,10 +108,6 @@ input[type=submit]:hover{
     display: none; /*stil can't change display with Javascript*/
 }
 
-.error{
-    border: 2px solid #FF7979;
-}
-
 #terms{
     font-size: .7rem;
     padding: 0 1.7rem 1.2rem;
